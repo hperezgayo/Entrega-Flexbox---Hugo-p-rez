@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Agency · Flexbox Practice</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__bar">
+      <a class="brand" href="#">DIGITAL AGENCY</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav">☰</button>
+      <nav id="nav" class="nav">
+        <ul class="nav__list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero__copy">
+        <h1>Building Digital Products, Brand & Experience</h1>
+        <p>Digital Agency is your online team for design, web and product. Fast, easy and reliable.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Contact Us</a>
+          <a class="btn" href="#about">Learn more</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop" alt="Team working illustration" />
+      </div>
+    </section>
+
+    <section class="trusted container" aria-label="Trusted by logos">
+      <p class="trusted__title">Trusted By 4,000+ Companies</p>
+      <ul class="trusted__logos">
+        <li>Spotify</li>
+        <li>Slack</li>
+        <li>Dropbox</li>
+        <li>Zoom</li>
+      </ul>
+    </section>
+
+    <section id="testimonials" class="testimonials container">
+      <h2>Read What Others Have To Say</h2>
+      <div class="cards">
+        <article class="card">
+          <img class="avatar" src="https://api.dicebear.com/9.x/thumbs/svg?seed=vera" alt="Vera Duncan avatar">
+          <h3>Vera Duncan</h3>
+          <p>“Excelente equipo, rápidos y muy claros. Nuestro MVP salió en semanas.”</p>
+        </article>
+        <article class="card">
+          <img class="avatar" src="https://api.dicebear.com/9.x/thumbs/svg?seed=mark" alt="Mark Smith avatar">
+          <h3>Mark Smith</h3>
+          <p>“Gran experiencia de principio a fin. Comunicación y resultados top.”</p>
+        </article>
+        <article class="card">
+          <img class="avatar" src="https://api.dicebear.com/9.x/thumbs/svg?seed=andrew" alt="Andrew Rathore avatar">
+          <h3>Andrew Rathore</h3>
+          <p>“Nos ayudaron a escalar la web con buenas prácticas y performance.”</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <div class="contact__box">
+        <h2>Let’s build something great</h2>
+        <p>Escríbenos y te respondemos en menos de 24 h.</p>
+        <a class="btn btn--primary" href="mailto:hello@example.com">hello@example.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <nav class="footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Customer Stories</a></li>
+          <li><a href="#">Glossary</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="container legal">© 2025 Digital Agency. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle=document.querySelector('.nav__toggle'); const nav=document.getElementById('nav');
+    toggle.addEventListener('click',()=>{ const open=toggle.getAttribute('aria-expanded')==='true'; toggle.setAttribute('aria-expanded',String(!open)); nav.classList.toggle('is-open'); });
+  </script>
+</body>
+</html>
